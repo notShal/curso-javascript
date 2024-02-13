@@ -76,17 +76,17 @@ console.warn("aviso!");
 
 const m = 10;
 
-if(m > 5) {
+if (m > 5) {
     console.log("M é maior que 5!");
 }
 
 const user = "João"
 
-if(user === "João") {
+if (user === "João") {
     console.log("Olá João!");
 }
 
-if(user === "Maria") {
+if (user === "Maria") {
     console.log("Olá Maria!");
 }
 
@@ -96,7 +96,7 @@ console.log(user === "João", user === "Maria");
 
 const loggedIn = false
 
-if(loggedIn) {
+if (loggedIn) {
     console.log("Está autenticado!");
 } else {
     console.log("Não está autenticado!");
@@ -105,7 +105,7 @@ if(loggedIn) {
 const q = 10
 const w = 25
 
-if(q > 5 && w > 20) {
+if (q > 5 && w > 20) {
     console.log("Os números são mais altos");
 } else {
     console.log("Os números não são mais altos");
@@ -113,20 +113,20 @@ if(q > 5 && w > 20) {
 
 // 9 - Estrutura condicional: else if
 
-if(1 > 2) {
+if (1 > 2) {
     console.log("Teste");
-} else if(2 > 3) {
+} else if (2 > 3) {
     console.log("Teste 2");
-} else if(5 > 1) {
+} else if (5 > 1) {
     console.log("Agora sim!");
 }
 
 const userName = "Shal"
 const userAge = 18
 
-if(userName === "Shal") {
+if (userName === "Shal") {
     console.log("Bem vindo José!");
-} else if(userName === "Shal" && userAge === 31) {
+} else if (userName === "Shal" && userAge === 31) {
     console.log("Olá Shal, você tem 18 anos!");
 } else {
     console.log("Nenhuma condição aceita!");
@@ -136,17 +136,90 @@ if(userName === "Shal") {
 
 let p = 0
 
-while(p < 5) {
+while (p < 5) {
     console.log(`Repetindo ${p}`);
     p = p + 1;
 }
 
- // loop infinito
+// loop infinito
 
- //let x = 10
+//let x = 10
 
- //while(x > 5) {
- //   console.log(`Imprimindo ${x}`);
- //}
+//while(x > 5) {
+//   console.log(`Imprimindo ${x}`);
+//}
 
- 
+// 11 - Estruturas de repetição - Do while
+
+let o = 10
+
+do {
+    console.log(`Valor do o: ${o}`);
+    o--
+} while (o > 1);
+
+// 12 - Estruturas de repetição - For
+
+for (let t = 0; t < 10; t++) {
+    console.log("Repetindo algo...");
+}
+
+let r = 10
+
+for (r; r > 0; r = r - 1) {
+    console.log("O r está diminuindo...");
+}
+
+// 13 - Identação
+
+for (let u = 0; u < 10; u++) {
+    if (u * 2 > 10) {
+        console.log(`Maior que 10! ${u}`);
+    } else {
+        if (u / 2 === 0) {
+            console.log("deu 0");
+        }
+    }
+}
+
+// 14 - Break
+
+for (let g = 20; g > 10; g--) {
+    console.log(`O valor de g é ${g}`);
+
+    if (g === 15) {
+        console.log("O g é 15!");
+        break;
+    }
+}
+
+// 15 - Continue
+
+for (let s = 1; s < 10; s++) {
+    // operador de resto = %
+    if (s % 2 === 0) {
+        console.log("Numero par!");
+        continue;
+    }
+
+    console.log(s);
+}
+
+// 16 - switch
+
+const job = "Advogado"
+
+switch (job) {
+    case "Programador":
+        console.log("Você é um programador!");
+        break
+    case "Advogado":
+        console.log("Você é um Advogado");
+        break
+    case "Engenheiro":
+        console.log("Você é um Engenheiro!");
+        break
+    default:
+        console.log("Profissão não encontrada.");
+}
+
