@@ -105,7 +105,7 @@ parOuImpar(10);
 // 6 - Arrow function pt2
 
 const raizQuadrada = (x) => {
-    return x / x;
+    return x * x;
 }
 
 console.log(raizQuadrada(4));
@@ -119,3 +119,17 @@ console.log(raizQuadrada(12));
 const helloWorld = () => console.log("Hello world");
 
 helloWorld();
+
+// 7 - parametro opcional
+
+const multiplication = function(m, n) {
+    if(n === undefined) {
+        return m * 2
+    } else {
+        m * n
+    }
+}
+
+console.log(multiplication(5));
+
+console.log(multiplication(2, 4));
