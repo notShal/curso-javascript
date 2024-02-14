@@ -90,7 +90,7 @@ const testArrow = () => {
 testArrow();
 
 const parOuImpar = (n) => {
-    if(n % 2 === 0) {
+    if (n % 2 === 0) {
         console.log("Par");
         return;
     }
@@ -122,14 +122,95 @@ helloWorld();
 
 // 7 - parametro opcional
 
-const multiplication = function(m, n) {
-    if(n === undefined) {
+const multiplication = function (m, n) {
+    if (n === undefined) {
         return m * 2
     } else {
-        m * n
+        return m * n
     }
 }
 
 console.log(multiplication(5));
 
 console.log(multiplication(2, 4));
+
+const greeting = (nome) => {
+    if (!nome) {
+        console.log("Olá!");
+        return;
+    }
+
+    console.log(`Olá ${nome}`);
+}
+
+greeting();
+
+greeting("Shal");
+
+// 8 - Argumento com valor default
+
+const customGreeting = (name, greet = "Olá") => {
+    return `$(greet), $(name)!`;
+};
+
+console.log(customGreeting("Shal"));
+
+console.log(customGreeting("Matt", "Bom dia!"));
+
+const repeatText = (Text, repeat = 2) => {
+    console.log(Text);
+}
+
+repeatText("Testanto");
+
+repeatText("Agora repete 5 vezes", 5);
+
+// - 9 Closure
+
+function someFunction() {
+    let txt = "Alguma coisa";
+    
+    function display() {
+        console.log(txt);
+    }
+
+    display();
+}
+
+someFunction();
+
+// 10 - mais sobre closure
+
+const multiplicationClosure = (n) => {
+    return (m) => {
+        return n * m;
+    }
+}
+
+const c1 = multiplicationClosure(5);
+
+const c2 = multiplicationClosure(10);
+
+console.log(c1);
+
+console.log(c2);
+
+console.log(c1(5));
+
+console.log(c2(10));
+
+// 11 - Recursion
+
+const untilTen = (n, m) => {
+    if(n < 10) {
+        console.log("A função parou de executar!");
+    } else {
+        const x = n - m
+
+        console.log(x);
+
+        untilTen(x, m)
+    }
+}
+
+untilTen(100, 7);
