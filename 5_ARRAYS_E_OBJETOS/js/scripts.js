@@ -246,6 +246,124 @@ console.log(brands.includes("Fiat"));
 
 console.log(brands.includes("KIA"));
 
-if (brands,includes("BMW")) {
+if (brands.includes("BMW")) {
     console.log("Há carros da marca BMW!");
 }
+
+// 17 - reverse
+
+const reverseTest = [1, 2, 3, 4, 5];
+
+reverseTest.reverse();
+
+console.log(reverseTest);
+
+// 18 - trim
+
+const trimTest = "    testando \n  "
+
+console.log(trimTest);
+
+console.log(trimTest.trim());
+
+console.log(trimTest.length);
+
+console.log(trimTest.trim().length);
+
+// 19 - padStart
+
+const testPadStart = "1"
+
+const newNumber = testPadStart.padStart(4, "0");
+
+console.log(testPadStart);
+
+console.log(newNumber);
+
+const testPadEnd = newNumber.padEnd(10, "0");
+
+console.log(testPadEnd);
+
+// 20 - split
+
+const frase =  "O rato roeu a roupa do rei de roma";
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+
+// 21 - join
+
+const fraseDeNovo = arrayDaFrase.join(" ");
+
+console.log(fraseDeNovo);
+
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"];
+
+const fraseDaCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`;
+
+console.log(fraseDaCompra);
+
+// 22 - repeat
+
+const palavra = "Testando ";
+
+console.log(palavra.repeat(5));
+
+// 23 - Rest Operator
+
+const somaInfinita = (...args) => {
+    let total = 0;
+
+    for (let i = 0; i < args.length; i++) {
+        total += args[i];
+    }
+
+    return total;
+};
+
+console.log(somaInfinita(1, 2, 3));
+
+console.log(somaInfinita(1, 20, 34, 15146, 161471, 15, 5548));
+
+// 24 - for of
+
+const somaInfinita2 = (...args) => {
+    let total = 0;
+
+    for (num of args) {
+        total += num;
+    }
+
+    return total;
+};
+
+console.log(1, 3, 4);
+
+console.log(1, 30, 441, 12, 15550, 14);
+
+// 25 - destructuring em objetos
+
+const userDetails = {
+    firstName: "Shal",
+    lastName: "Mesquita",
+    job: "Programador",
+};
+
+const { firstName, lastName, job} = userDetails;
+
+console.log(firstName, lastName, job);
+
+// ronomear variaveis
+
+const { firstName: primeiroNome } = userDetails;
+
+console.log(firstName);
+
+// 26 - destructuring com arrays
+
+const myList = ["Avião", "Submariono", "Carro", "Trator"];
+
+const [veiculoA, veiculoB, veiculoC] = myList;
+
+console.log(veiculoA, veiculoB, veiculoC);
