@@ -225,3 +225,33 @@ console.log(boeing);
 console.log(boeing[asas]);
 
 console.log(boeing[pilotos]);
+
+// 13 - getters e setters
+
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo
+        this.descricao = descricao
+        this.tags = tags
+    }
+
+    get exibirTitulo() {
+        return `Você está lendo: ${this.titulo}`
+    }
+
+    set adcionarTags(tags) {
+        const tagsArrays = tags.split(", ")
+        this.tags = tagsArrays
+    }
+}
+
+const myPost = new Post("Algum post", "É um post sobre programação")
+
+console.log(myPost);
+
+
+console.log(myPost.exibirTitulo);
+
+myPost.adcionarTags = "programação, javascript, js"
+
+console.log(myPost);
