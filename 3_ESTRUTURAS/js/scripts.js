@@ -160,6 +160,10 @@ do {
 
 // 12 - Estruturas de repetição - For
 
+// for ([inicialização]; [condição]; [expressão final]){
+//     seu codigo aqui
+// }
+
 for (let t = 0; t < 10; t++) {
     console.log("Repetindo algo...");
 }
