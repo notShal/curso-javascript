@@ -27,3 +27,33 @@ function divisao(num1, num2){
 divisao(40, 8)
 
 console.log("2" + "2" - "2");
+
+// return
+
+function estaEndividado (receita, gastos) {
+    if ( receita > gastos) {
+        return `Está no Azul`
+    } else {
+        return `Está no Vermelho`
+    }
+}
+
+const maria = estaEndividado(5000, 7000)
+const shal = estaEndividado(1000, 5000)
+
+console.log(maria);
+console.log(shal);
+
+const estaEndividadoAF = (receita2, gastos2) => {
+    if (receita2 > gastos2) {
+        return "Está positivo"
+    }else {
+        return "Está endividado"
+    }
+}
+
+const pedro = estaEndividadoAF(2000, 5000)
+const clara = estaEndividadoAF(5000, 1000)
+
+console.log(pedro);
+console.log(clara);
